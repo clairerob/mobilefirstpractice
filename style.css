@@ -58,10 +58,15 @@ img {
 
 
 /* fonts */
-h2, h3, h4 {
+h2, h4 {
     color:#d9b76d;
     font-weight: normal;
     line-height: 1.2;
+}
+
+h3{
+    color: var(--primary);
+    font-size: 1.4em;
 }
 
 p, li {
@@ -149,6 +154,51 @@ h4 {
     grid-row: 2/3;
 }
 
+#menu {
+    background:  #1e454b9a;
+    padding: 30px 20px;
+}
+
+#menu h3 {
+    text-align: center;
+}
+
+.drinks a {
+    grid-column: 1/9;
+    margin: 20px 0;
+    display: flex;
+}
+
+.drinks a * {
+    margin: 0 20px;
+    max-width: 45%;
+    align-self: center;
+}
+
+#roasters {
+    padding: 30px 20px;
+}
+
+#roasters h3 {
+    text-align: center;
+}
+
+#roasters ul {
+    margin: 40px 0;
+}
+#roasters li {
+    padding: 20px;
+    background-color: #1e454b9a;
+    grid-column: span 4;
+    text-align: center;
+    margin: 7px;
+}
+
+
+footer {
+    background:  #1e454b9a;
+    padding: 20px;
+}
 
 
 /* small tablet styles */
