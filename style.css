@@ -3,11 +3,6 @@
     --primary: #C38C29;
     --secondary: #063137;
 }
-
-
-/* practice */
-
-
 /* reset */
 body, p, a, ul, li {
     margin: 0;
@@ -18,7 +13,6 @@ body, p, a, ul, li {
 li {
     list-style-type: none;
 }
-
 
 /* base styles */ 
 /* hidden on x because video man wants a partially hidden img on mobile */
@@ -38,7 +32,6 @@ text-transform: uppercase;
 box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
 display: inline-block;
 }
-
 .button:hover {
     color: #222;
     background: var(--primary);
@@ -54,6 +47,11 @@ input, textarea {
 
 img {
     max-width: 100%;
+    border-radius: 10px;
+}
+
+#menu img {
+    border-radius: 20px;
 }
 
 
@@ -63,46 +61,33 @@ h2, h4 {
     font-weight: normal;
     line-height: 1.2;
 }
-
-h3{
+h3 {
     color: var(--primary);
     font-size: 1.4em;
 }
-
 p, li {
     color: #EEFCFE;
 }
-
 a {
     color: #A4CCD3;
 }
-
 h1 {
     font-size: 1.7em;
     font-weight: 500;
     padding-top: 0.5em;
     color: var(--primary);
 }
-
 h2 {
     font-size: 1.4em;
     font-weight: 400;
 }
-
-h3 {
-    font-size: 1.2em;
-}
-
 h4 {
     font-size: 1.1em;
 }
-
 .leading {
     font-size: 1.1em;
     font-weight: 400;
-
 }
-
 
 
 /* mobile styles */
@@ -114,16 +99,13 @@ h4 {
 .site-nav {
     margin: 18px 10px;
 }
-
 .site-nav ul {
     display: none;
 }
-
 .site-nav img {
     grid-column: 1/3;
     align-self: center;
 }
-
 .site-nav h1{
     grid-column: 3/7;
     border-bottom: 3px solid var(--primary);
@@ -132,17 +114,14 @@ h4 {
 #welcome {
     padding: 0 20px 20px 20px;
 }
-
 .welcome-text {
     grid-column: 1/6;
     grid-row: 1/3;
     padding-right: 20px;
 }
-
 .welcome-text a {
     margin: 20px 0;
 }
-
 .welcome-img {
     align-self: center;
 }
@@ -157,7 +136,7 @@ h4 {
     grid-row: 2/3;
 }
 
-.horizontal {
+.welcome-img-horizontal {
     display: none;
 }
 
@@ -165,7 +144,6 @@ h4 {
     background:  #1e454b9a;
     padding: 30px 20px;
 }
-
 #menu h3 {
     text-align: center;
 }
@@ -175,7 +153,6 @@ h4 {
     margin: 20px 0;
     display: flex;
 }
-
 .drinks a * {
     margin: 0 20px;
     max-width: 45%;
@@ -185,15 +162,12 @@ h4 {
 #roasters {
     padding: 30px 20px;
 }
-
 #roasters h3 {
     text-align: center;
 }
-
 #roasters ul {
     margin: 40px 0;
 }
-
 #roasters li {
     padding: 20px;
     background-color: #1e454b9a;
@@ -205,46 +179,38 @@ h4 {
 #contact {
     padding: 30px 20px;
 }
-
 #contact h3, #contact p {
     text-align: center;
     margin-bottom: 0;
 }
-
 #contact form {
     width: 80%;
     max-width: 400px;
     margin: 20px auto;
+    padding-right: 9%;
     text-align: center;
 }
-
 #contact input, #contact textarea {
     width: 100%;
     margin: 10px 0;
 }
-
 #contact .button {
     margin-top: 10px;
 }
-
-
 
 footer {
     background:  #1e454b9a;
     padding: 30px 20px;
 }
-
 footer .copyright {
     grid-column: 1/3;
     font-size: 0.8em;
 }
-
 footer .social {
     grid-column: 7/9;
     display: flex;
     justify-content: flex-end;
 }
-
 footer li {
     margin: 0 10px;
     font-size: 1.5em;
@@ -253,7 +219,57 @@ footer li {
 
 /* small tablet styles */
 @media screen and (min-width: 620px) {
-    
+
+    #pasco {
+        padding-top: 25px;
+        font-size: 2.15em;
+    }
+
+    .welcome-text {
+        grid-column: 1/5;
+    }
+    .v60 {
+        display: none;
+        grid-column: 5/9;
+    }
+    .chem {
+        grid-column: 5/9;
+        grid-row: 1/2;
+        padding-bottom: 1.5em;
+    }
+    .welcome-img-horizontal {
+        display: inline;
+        grid-column: 1/9;
+        grid-row: 2/3;
+        align-self: center;
+        padding-bottom: 1.5em;
+    }
+
+    h3 {
+        margin-bottom: 40px;
+    }
+    .drinks a {
+        grid-column: span 4;
+        display: block;
+        margin: 20px 0;
+    }
+    .drinks a * {
+        max-width: 60%;
+        margin: 10px 20%;
+        text-align: center;
+    }
+
+    #roasters {
+        padding: 30px 100px;
+    }
+
+    #contact form {
+        padding-right: 4%;
+    }
+
+    footer {
+        background-size: 20%;
+    }
 }
 
 
@@ -262,10 +278,78 @@ footer li {
 /* large tablets & laptop styles */
 @media screen and (min-width: 960px) {
     
+    #pasco {
+        padding-top: 40px;
+    }
     body {
         font-size: 18px;
     }
+    .grid {
+        width: 100%;
+        max-width: 1060px;
+        margin: 0 auto;
+    }
 
+    .leading {
+        margin: 20px 0;
+    }
+    .site-nav h1{
+        grid-column: 3/6;
+    }
+    .site-nav ul {
+        display: flex;
+        grid-column: 6/9;
+        justify-content: flex-end;
+        align-self: center;
+    }
+    .site-nav li {
+        margin-right: 20px;
+    }
+
+    .welcome-text {
+        margin-top: 100px;
+    }
+
+    .drinks a * {
+        max-width: 80%;
+    }
+    .drinks a:nth-child(3) {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .drinks a:nth-child(2) {
+        grid-column: 3/5;
+        grid-row: 1/2;
+        align-self: center;
+    }
+    .drinks a:nth-child(4) {
+        grid-column: 5/9;
+        grid-row: 1/3;
+        align-self: center;
+    }
+    .drinks a:nth-child(1) {
+        grid-column: 1/5;
+        grid-row: 2/3;
+    }
+
+    #roasters{
+        padding: 30px 20px;
+    }
+    #roasters ul {
+        margin: 40px auto;
+    }
+    #roasters li {
+        grid-column: span 2;
+    }
+ 
+    #contact form {
+        padding-right: 2%;
+    }   
+    
+    footer {
+        padding: 40px 20px;
+        background-size: 25%;
+    }
 }
 
 
@@ -276,6 +360,26 @@ footer li {
     
     body {
         font-size: 20px;
+    }
+
+    #welcome, #menu, #roasters, #contact {
+        padding: 90px, 0;
+    }
+
+    #contact form {
+        padding-right: 1%;
+    }  
+
+    .drinks a * {
+        max-width: 80%;
+    }
+
+    footer {
+        padding: 80px 0;
+    }
+
+    footer img {
+        width: 30px;
     }
 }
 
